@@ -1,7 +1,7 @@
 package classes;
 import java.lang.*;
 
-public abstract class Patient extends Person {
+public class Patient extends Person {
     public String Status;
     public double Fees;
 
@@ -30,16 +30,17 @@ public abstract class Patient extends Person {
     }
 
     public void showPersonInf(){
-        this.ID = ID;
-        this.Name = Name;
-        this.DOB = DOB;
-        this.Gender = Gender;
-        this.Location = Location;
-        this.bloodGroup = bloodGroup;
-        this.Address = Address;
-        this.Phone = Phone;
-        this.Fees = Fees;
-        this.Status = Status;
+        System.out.println("==== Patient Info's ====\n");
+        System.out.println("ID: " + this.ID);
+        System.out.println("Name: " + this.Name );
+        System.out.println("DOB: " + this.DOB);
+        System.out.println("Gender: " + this.Gender);
+        System.out.println("Blood Group: " + this.bloodGroup);
+        System.out.println("Phone: " + this.Phone);
+        System.out.println("Location: " + this.Location);
+        System.out.println("Address: " + this.Address);
+        System.out.println("Fees: " + this.Fees);
+        System.out.println("Status: " + this.Status);
     }
 
 }

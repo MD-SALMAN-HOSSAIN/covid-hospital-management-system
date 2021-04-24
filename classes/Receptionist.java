@@ -17,15 +17,16 @@ public abstract class Receptionist extends Employee {
     }
 
     public void showPersonInf(){
-        this.ID = ID;
-        this.Name = Name;
-        this.DOB = DOB;
-        this.Gender = Gender;
-        this.Location = Location;
-        this.bloodGroup = bloodGroup;
-        this.Address = Address;
-        this.Phone = Phone;
-        this.Salary = Salary;
+        System.out.println("==== Receptionist Info's ====\n");
+        System.out.println("ID: " + this.ID);
+        System.out.println("Name: " + this.Name );
+        System.out.println("Phone: " + this.Phone);
+        System.out.println("Salary: " + this.Salary);
+        System.out.println("DOB: " + this.DOB);
+        System.out.println("Gender: " + this.Gender);
+        System.out.println("Location: " + this.Location);
+        System.out.println("Blood Group: " + this.bloodGroup);
+        System.out.println("Address: " + this.Address);
     }
 
 
