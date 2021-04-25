@@ -1,12 +1,23 @@
 package classes;
 import java.lang.*;
+import java.util.Scanner;
 
-public abstract class Doctor extends Person {
+public class Doctor{
     private String Salary;
     public String Schedule;
 
-    public Doctor(String ID, String Name, String DOB, String Gender, String Location, String bloodGroup, String Address, String Phone) {
-        super(ID, Name, DOB, Gender, Location, bloodGroup, Address, Phone);
+    private String id;
+    private String name;
+    private String speciality;
+    private String gender;
+    private String number;
+
+    public Doctor(String id, String name, String speciality, String gender, String number) {
+        this.id = id;
+        this.name = name;
+        this.speciality = speciality;
+        this.gender = gender;
+        this.number = number;
     }
 
     public void setSalary(String Salary) {
@@ -25,18 +36,28 @@ public abstract class Doctor extends Person {
         return Schedule;
     }
 
-    public void showPersonInf(){
-        System.out.println("==== Doctor Info's ====\n");
-        System.out.println("ID: " + this.ID);
-        System.out.println("Name: " + this.Name );
-        System.out.println("Schedule: " + this.Schedule);
-        System.out.println("Phone: " + this.Phone);
-        System.out.println("Salary: " + this.Salary);
-        System.out.println("DOB: " + this.DOB);
-        System.out.println("Gender: " + this.Gender);
-        System.out.println("Location: " + this.Location);
-        System.out.println("Blood Group: " + this.bloodGroup);
-        System.out.println("Address: " + this.Address);
+    public void doctor1(){
+        System.out.println("====    ====\n");
+        System.out.println("Get doctor 1");
+        Receptionist.medicine();
+        ////
+        System.out.println("Do you want to check your problem again if yes press 'y' if not press 'n ");
+        Scanner scanner=new Scanner(System.in);
+        String option=scanner.next();
+        if(option.equals("y")){
+            Patient.userInput();
+        }
+        else{
+
+        }
+        //////
+
+    }
+    public void doctor2(Nurse d){
+        System.out.println("====    ====\n");
+        d.showNurseInfo();
+        Receptionist.surgeon();
+        Patient.userInput();
     }
 
 
